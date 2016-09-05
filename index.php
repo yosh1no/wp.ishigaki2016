@@ -9,11 +9,11 @@
 <![endif]-->
 <title><?php bloginfo('name'); ?></title>
 </head>
-<body class="home">
+<body <?php body_class();?>>
     <header class="globalHeader">
         <div class="inner">
-            <h1><a href="/"><img src="<?php echo get_template_directory_uri(); ?>images/common/logo01.png" height="40" width="300" alt="ホテル・技評リゾート石垣島"></a></h1>
-            <p class="description">サイトのキャッチフレーズ</p>
+            <h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logo01.png" height="40" width="300" alt="ホテル・技評リゾート石垣島"></a></h1>
+            <p class="description"><?php bloginfo('description'); ?></p>
             <form action="" method="get" class="searchform">
                 <input type="text" value="" name="s" id="s" placeholder="サイト内検索">
                 <input type="submit" id="searchSubmit" value="">
