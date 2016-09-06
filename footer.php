@@ -11,5 +11,6 @@
             <small>&copy; HOTEL GIHYO RESORT ISHIGAKI All Rights Reserved.</small>
         </div>
     </footer><!-- /.globalFooter -->
+<?php wp_footer(); ?>
 </body>
 </html>
