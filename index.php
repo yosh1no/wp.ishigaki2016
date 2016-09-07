@@ -30,7 +30,13 @@
                         <?php the_excerpt(); ?>
                         <p>[<a href="<?php the_permalink(); ?>">続きを読む</a>]</p>
                     </div>
-                    <figure><a href="single.html"><img src="<?php echo get_template_directory_uri(); ?>/images/dummy/180x180-3.png" height="180" width="180" alt=""></a></figure>
+                    <figure>
+                    <?php if ( has_post_thumbnail() ): ?>
+                      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                    <?php else: ?>
+                      <a hlef="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/noimage_180x180.png" height="180" width="180" alt=""></a>
+                    <?php endif; ?>
+                    </figure>
                 </article><!-- /.news -->
                 <?php
                     endwhile;
