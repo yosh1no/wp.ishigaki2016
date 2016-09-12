@@ -36,10 +36,11 @@ wp_head();
     <div class="homeVisual"><span>石垣島でのんびりゆったりと。</span></div>
     <?php endif; ?>
     <nav class="globalNavi">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ホテル紹介</a></li>
-            <li><a href="access.html">アクセス</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
+        <?php
+          $args = array(
+              'menu' => 'global-navigation', //管理画面で作成したメニューの名前
+              'container' => false, // <ul>タグを囲んでいる<div>タグを削除
+          );
+          wp_nav_menu($args);
+          ?>
     </nav><!-- /.globalNavi -->
