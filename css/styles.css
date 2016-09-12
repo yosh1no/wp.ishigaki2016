@@ -743,7 +743,7 @@ article.entry {
     margin-bottom: 30px; }
     article.entry .content h1:first-child, article.entry .content h2:first-child, article.entry .content h3:first-child, article.entry .content h4:first-child {
       margin-top: 0; }
-    article.entry .content h1 {
+    article.hentry .content h1 {
       border-left: 5px solid #328bda;
       font-size: 18px;
       font-size: 1.8rem;
