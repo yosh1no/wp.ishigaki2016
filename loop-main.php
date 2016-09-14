@@ -32,3 +32,5 @@ else : //記事がなかった場合
       <p>記事はありません。</p>
   <?php endif; ?>
 <?php endif; ?>
+
+<?php if ( function_exists( 'wp_pagenavi' ) ) { wp_pagenavi(); } ?>
