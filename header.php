@@ -41,3 +41,14 @@ wp_head();
           wp_nav_menu($args);
           ?>
     </nav><!-- /.globalNavi -->
+
+<?php if ( !is_home() ): ?>
+  <div class="breadcrumbs">
+  <?php
+  //パンくずリストを表示
+  if ( function_exists( 'bcn_display' ) ) {
+      bcn_display();
+    }
+    ?>
+  </div>
+<?php endif; ?>
