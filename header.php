@@ -40,4 +40,4 @@ wp_head();
           );
           wp_nav_menu($args);
           ?>
-    </nav><!-- /.globalNavi -->6
+    </nav><!-- /.globalNavi -->
