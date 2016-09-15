@@ -21,6 +21,8 @@
                 <?php the_content(); ?>
                 </section><!-- /.content -->
 
+                <?php comments_template(); ?>
+
                 <nav class="postNavi">
                     <span class="prev"><?php previous_post_link('%link'); ?></span>
                     <span class="next"><?php next_post_link('%link'); ?></span>
