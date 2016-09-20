@@ -2,6 +2,7 @@
     <a href="<?php echo get_permalink( 32 ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/bnr_contact01.png" height="183" width="300" alt="宿泊のお問い合わせ"></a>
 </p>
 <div class="wrapper">
+    <?php get_template_part('loop','recently'); ?>
     <section class="socialBanners">
         <h2 class="hidden">関連バナー</h2>
         <div class="banners">
