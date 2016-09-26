@@ -50,10 +50,12 @@ add_filter( 'the_content_feed', 'rss_post_thumbnail');
 /**
  *RSSに「続きを読む」のリンクを追加する
  */
-add_filter('excerpt_more','excerpt_more');
+/*
+add_filter('excerpt_more','my_excerpt_more');
 function my_excerpt_more( $more ) {
   return '...<a href="'. get_permalink( get_the_ID() ) . '">続きを読む→</a>';
 }
+*/
 
 //RSSの配信を止める
 // remove_action('do_feed_rss2', 'do_feed_rss2', 10, 1);
