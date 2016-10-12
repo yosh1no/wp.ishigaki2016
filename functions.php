@@ -94,4 +94,48 @@ add_filter('wp_default_editor', 'my_wp_default_editor');
 function my_wp_default_editor(){
   return 'tinymce';
 }
+
+/**
+ * メッセージを表示する簡単なショートコード
+ */
+function shortcode_test(){
+    return "「ショートコードのテストです」";
+}
+add_shortcode('test', 'shortcode_test');
+
+/**
+ * ツイッターへのリンクを表示するショートコード
+ */
+function shortcode_twitter(){
+  return 'こんにちは！ナカシマ(<a href="https://twitter.com/kanakogi" target="blank">@kanakogi</a>)です。';
+}
+add_shortcode('twitter', 'shortcode_twitter');
+
+/**
+ * パラメータでりんごの個数を受け取るショートコード
+ */
+function shortcode_apple($atts){
+    $atts = shortcode_atts(array(
+              'num' => 5, //$numの初期値を設定
+          ), $atts);
+    extract($atts); //連想配列から変数を作成
+    return "リンゴが" . $num . "個ありました。";
+}
+add_shortcode('apple', 'shortcode_apple');
+
+/**
+ * クラス名がwrapの<div>タグで囲むショートコード
+ */
+function shortcode_price($atts, $content = null) {
+  return '<div class="wrap"><em>価格</em>:' . $content . '</div>';
+}
+add_shortcode('price', 'shortcode_price');
+
+/**
+ * 画像データへのパスを返すショートコード
+ */
+function shortcode_url(){
+    echo get_template_directory_uri();
+}
+add_shortcode('dir_url', 'shortcode_url');
 ?>
